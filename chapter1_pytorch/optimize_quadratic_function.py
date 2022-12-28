@@ -10,12 +10,12 @@ def export_svg(obj, filename):
     plot_state.output_backend = 'svg'
     export_svgs(plot_state, filename=filename)
 
-def fcn(x):
+def f(x):
     return (x-2)**2
 
 # first compute the function over the interval [-2,4]
 x = torch.linspace(-2,4,100)
-y = fcn(x)
+y = f(x)
 
 # now plot it with holoviews and save it out as a file
 pts = list(zip(x.numpy(),y.numpy()))
@@ -37,7 +37,7 @@ for i in range(iterations):
 
     print('Iter {}: x={}'.format(i,x.item()))
 
-    y = fcn(x)
+    y = f(x)
     history.append( (float(i),x.item()))
 
     # backprop
