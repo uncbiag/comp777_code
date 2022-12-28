@@ -1,0 +1,7 @@
+#! /usr/bin/env tcsh
+
+foreach f (`find . -name "*.svg"`)
+  # always convert, even if the PDF already exists
+  echo "Converting $f to $f:r.pdf"
+  rsvg-convert -f pdf -o $f:r.pdf $f
+end

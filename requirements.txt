@@ -1,0 +1,4 @@
+torch~=1.13.1
+holoviews~=1.15.3
+bokeh~=2.4.3
+setuptools~=61.2.0
