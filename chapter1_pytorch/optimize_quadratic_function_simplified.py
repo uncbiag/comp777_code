@@ -22,5 +22,5 @@ x_star, history = optimize_fcn_with_torch(x, fcn=f, fcn_pars=None,
 
 # and show the result, including a horizontal line for the correct solution
 horizontal_line = hv.HLine(2.0).opts(opts.HLine(color='red', line_width=2),)
-history_plot = hv.Curve(history).opts(xlabel=("iterations"))
+history_plot = hv.Curve(history).opts(xlabel=('iterations'))
 show(hv.render(history_plot*horizontal_line))

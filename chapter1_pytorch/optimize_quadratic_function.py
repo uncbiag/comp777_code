@@ -47,6 +47,6 @@ for i in range(iterations):
 
 # and show the result, including a horizontal line for the correct solution
 horizontal_line = hv.HLine(2.0).opts(opts.HLine(color='red', line_width=2),)
-history_plot = hv.Curve(history).opts(xlabel=("iterations"))
+history_plot = hv.Curve(history).opts(xlabel=('iterations'))
 export_svg(history_plot*horizontal_line, 'ch1_history_plot.svg')
 show(hv.render(history_plot*horizontal_line))
